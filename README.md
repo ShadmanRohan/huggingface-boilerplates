@@ -1,2 +1,2 @@
 # huggingface-boilerplates
-Starter code for several HuggingFace based NLP-pipelines
+Starter code for HuggingFace based NLP-pipelines
