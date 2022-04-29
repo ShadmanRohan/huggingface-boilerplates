@@ -13,6 +13,17 @@ For Predicting
 trainer.predict(test_dataset)
 ```
 
+Pulling model from HUB
+```
+from transformers import pipeline
+
+model_name = "example-distilbert-base-uncased"
+tokenizer = DistilBertTokenizer.from_pretrained(model_name, do_lower_case=True)
+model_id = "UserName/RepoName"
+classifier = pipeline("text-classification", tokenizer= tokenizer, model=model_id)
+
+```
+
 Things to remember
 * compute_metrics(pred) -> returns a dictionary of metrics like accuracy, f1, precision, recall
 * dataset -> pytorch dataset(not dataloader). The data needs to be tokenized & structured for input to transformers.
